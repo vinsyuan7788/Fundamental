@@ -94,7 +94,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.java.se.driver.ApplicationDriver</mainClass>
+                  <mainClass>org.lang.scala.conclusion.message.TestMessageFormat</mainClass>
                 </transformer>
               </transformers>
             </configuration>
