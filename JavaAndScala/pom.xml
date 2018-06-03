@@ -47,13 +47,11 @@
   <dependencies>
   
     <!-- Scala standard library -->
-<!--  
     <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-library</artifactId>
       <version>${scala.version}</version>
     </dependency>
--->
 
     <!-- JUnit Test for Java -->
     <dependency>
