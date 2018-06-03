@@ -1,0 +1,5 @@
+com.java.se.conclusion.design.factory.configuration.common.Clerk
+gender=F
+age=25
+name=Violet
+id=550E8400-E29B-11D4-A716-446655440000

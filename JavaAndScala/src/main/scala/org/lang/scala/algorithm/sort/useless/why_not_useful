@@ -1,0 +1,4 @@
+These sort algorithms are introductory in textbooks and not useful in practice, since:
+-- Their time complexity is high
+-- Bad performance when the data is large
+-- Etc.

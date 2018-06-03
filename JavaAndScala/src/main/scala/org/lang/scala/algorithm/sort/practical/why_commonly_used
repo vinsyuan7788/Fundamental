@@ -1,0 +1,5 @@
+These algorithms and their advanced variants are commonly-used in practice, since:
+-- Average time complexity is low
+-- Can be used on either small or large amount of data
+-- Their advanced variants are well-adopted in different applications
+-- Etc.

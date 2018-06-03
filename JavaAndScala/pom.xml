@@ -1,0 +1,270 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fundamental</groupId>
+  <artifactId>JavaAndScala</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>${project.artifactId}</name>
+  <description>Java and Scala</description>
+  <inceptionYear>2016</inceptionYear>
+  <licenses>
+    <license>
+      <name>VinceYuan</name>
+      <url>http://....</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <!-- Properties for introduction of dependencies -->
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <encoding>UTF-8</encoding>
+    <scala.version>2.11.11</scala.version>
+    <scala.compatable.version>2.11</scala.compatable.version>
+    <scalatest.version>3.0.4</scalatest.version>
+    <akka.version>2.4.17</akka.version>
+  </properties>
+
+<!--
+  <repositories>
+    <repository>
+      <id>scala-tools.org</id>
+      <name>Scala-Tools Maven2 Repository</name>
+      <url>http://scala-tools.org/repo-releases</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>scala-tools.org</id>
+      <name>Scala-Tools Maven2 Repository</name>
+      <url>http://scala-tools.org/repo-releases</url>
+    </pluginRepository>
+  </pluginRepositories>
+-->
+
+  <!-- Dependencies for development -->
+  <dependencies>
+  
+    <!-- Scala standard library -->
+<!--  
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+-->
+
+    <!-- JUnit Test for Java -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+<!--  
+    <dependency>
+      <groupId>org.scala-tools.testing</groupId>
+      <artifactId>specs_2.9.1</artifactId>
+      <version>1.6.9</version>
+      <scope>test</scope>
+    </dependency>
+-->
+
+    <!-- 
+    	Scala test framework for Scala 
+    	== Need to make sure it is compatible with the Scala version that is being used currently
+    	== E.g., If currently using Scala 2.11.8, then <artifactId>scalatest_2.11</artifactId>
+    -->
+    <dependency>
+      <groupId>org.scalatest</groupId>
+      <artifactId>scalatest_${scala.compatable.version}</artifactId>
+      <version>${scalatest.version}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- Netty 4.1.13 -->
+	<dependency>
+	    <groupId>io.netty</groupId>
+	    <artifactId>netty-all</artifactId>
+	    <version>4.1.13.Final</version>
+	</dependency>
+    
+    <!-- Akka 2.4.17 with Scala 2.11 -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-actor_${scala.compatable.version}</artifactId>
+	    <version>${akka.version}</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-remote_${scala.compatable.version}</artifactId>
+	    <version>${akka.version}</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-testkit_${scala.compatable.version}</artifactId>
+	    <version>${akka.version}</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-slf4j_${scala.compatable.version}</artifactId>
+	    <version>${akka.version}</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-stream_${scala.compatable.version}</artifactId>
+	    <version>${akka.version}</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-cluster_${scala.compatable.version}</artifactId>
+	    <version>${akka.version}</version>
+	</dependency>
+
+	<!-- Dom4J 1.6.1 -->
+	<dependency>
+	    <groupId>dom4j</groupId>
+	    <artifactId>dom4j</artifactId>
+	    <version>1.6.1</version>
+	</dependency>
+	
+	<!-- XPath 1.1.6 -->
+	<dependency>
+	    <groupId>jaxen</groupId>
+	    <artifactId>jaxen</artifactId>
+	    <version>1.1.6</version>
+	</dependency>
+	
+	<!-- GSON 2.8.0 -->
+	<dependency>
+    	<groupId>com.google.code.gson</groupId>
+    	<artifactId>gson</artifactId>
+    	<version>2.8.0</version>
+	</dependency>
+	
+	<!-- Excel 2.6.12 -->
+	<dependency>
+	    <groupId>net.sourceforge.jexcelapi</groupId>
+	    <artifactId>jxl</artifactId>
+	    <version>2.6.12</version>
+	</dependency>
+  </dependencies>
+
+	<!-- Directory specification, plug-ins and packages for Maven build -->
+	<build>
+		<!-- Here specifies main and test directory of source and resources -->
+	    <sourceDirectory>src/main/java</sourceDirectory>
+	    <resources>
+	    	<resource>
+	    		<directory>src/main/resources</directory>
+	   		</resource>
+		</resources>
+	    <testSourceDirectory>src/test/java</testSourceDirectory>
+	    <testResources>
+	    	<testResource>
+	    		<directory>src/test/resources</directory>
+	   		</testResource>
+		</testResources>
+		
+		<!-- Here specifies the plugins that can be used by the children POM files (including this file) of this file -->
+		<pluginManagement>
+			<plugins>
+				<!-- 
+					This plugin is used for compiling/testing/running/documenting Scala code of any Maven project
+					== Confirmed usable version: 3.2.1
+				-->
+				<plugin>
+					<groupId>net.alchim31.maven</groupId>
+					<artifactId>scala-maven-plugin</artifactId>
+					<version>3.2.1</version>
+				</plugin>
+				<!--
+					This plugin is used to compile the sources of current project
+					== Confirmed usable version: 2.0.2, 3.6.1
+				-->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.6.1</version>
+				</plugin>
+				<!--  
+					This plugin is used to package necessary dependencies and specify main class
+					== Confirmed usable version: 2.4.1
+				-->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>  
+		            <artifactId>maven-shade-plugin</artifactId>  
+		            <version>2.4.1</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		
+		<!-- Here specifies the necessary plugins, which must be included by plugin management -->
+		<plugins>
+			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>scala-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>scala-compile-first</id>
+						<phase>process-resources</phase>
+						<!-- Here specifies that Scala must be included as source during compilation period -->
+						<goals>
+							<goal>add-source</goal>
+							<goal>compile</goal>
+						</goals>
+						<!-- Here specifies the arguments for Scala compiler to address specific warnings during Maven compilation -->
+						<configuration>
+							<args>
+								<arg>-language:implicitConversions</arg>
+								<arg>-language:postfixOps</arg>
+							</args>
+						</configuration>
+					</execution>
+					<execution>
+						<id>scala-test-compile</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>  
+	            <groupId>org.apache.maven.plugins</groupId>  
+	            <artifactId>maven-shade-plugin</artifactId>  
+	            <executions>  
+	                <execution>  
+	                    <phase>package</phase>  
+	                    <goals>  
+	                        <goal>shade</goal>  
+	                    </goals>  
+	                    <configuration>  
+	                        <transformers>
+	                        	<!-- Here specifies the main class for this Maven project after packaging -->
+	                            <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">  
+	                                <mainClass>org.lang.scala.conclusion.message.TestMessageFormat</mainClass>
+	                                <!-- <mainClass>com.java.se.driver.ApplicationDriver</mainClass>  -->
+	                            </transformer>  
+	                        </transformers>  
+	                    </configuration>  
+	                </execution>  
+	            </executions>  
+	        </plugin>
+		</plugins>
+	</build>
+</project>

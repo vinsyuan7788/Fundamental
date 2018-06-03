@@ -1,0 +1,6 @@
+Similarity between Akka and Netty:
+-- Both are event-driven
+
+Differences between Akka and Netty:
+-- Akka is higher-level framework while Netty is lower-level framework
+-- Akka is using Netty as its bottom-level for actor distribution

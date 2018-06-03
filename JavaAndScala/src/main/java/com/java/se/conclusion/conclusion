@@ -1,0 +1,9 @@
+Java SE contains several large blocks:
+-- Primitive Types, Wrapper Types, String, Regex
+-- OOP, Memory (Stack, Heap, Method Area)
+-- Collections, Map, Array
+-- File, IO Stream, Properties, XML, Exception
+-- Thread, Synchronization, Network Programming
+-- Generics, Type Erasure, Reflection, Annotation
+-- Lambda Expression, Method References, Functional Interfaces, Stream
+-- Design Pattern

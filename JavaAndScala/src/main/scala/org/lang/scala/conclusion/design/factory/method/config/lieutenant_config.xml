@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config> 
+	<bean class="org.lang.scala.conclusion.design.factory.method.common.Lieutenant"> 
+    	<id>550E8400-E29B-11D4-A716-446655440000</id>  
+    	<name>Violet</name>  
+    	<age>25</age>  
+    	<gender>F</gender> 
+  	</bean>
+</config>

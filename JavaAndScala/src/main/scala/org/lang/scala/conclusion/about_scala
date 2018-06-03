@@ -1,0 +1,5 @@
+For Scala, since it introduces implicits features, hence from 3-dimensional perspective:
+-- If generics is X-axis, then:
+   -- OOP features (abstraction, inheritance, polymorphism): z-axis (horizontal angle)
+   -- Implicits features: y-axis
+      -- Similar as the angle of AOP (Aspect-Oriented Programming), namely vertical angle

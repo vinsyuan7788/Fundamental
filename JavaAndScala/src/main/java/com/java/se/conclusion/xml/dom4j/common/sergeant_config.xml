@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config> 
+  <bean class="com.java.se.conclusion.design.factory.method.common.Sergeant"> 
+    <gender>M</gender>  
+    <age>27</age>  
+    <name> 
+      <firstName>Vince</firstName>  
+      <lastName>Yuan</lastName> 
+    </name>  
+    <id>550E8400-E29B-11D4-A716-446655440000</id> 
+  </bean>  
+  <bean class="com.java.se.conclusion.design.factory.method.common.Sergeant"> 
+    <gender>F</gender>  
+    <age>25</age>  
+    <name> 
+      <firstName>Violet</firstName>  
+      <lastName>He</lastName> 
+    </name>  
+    <id>550E8400-E29B-11D4-A716-446655441111</id> 
+  </bean>  
+  <bean class="com.java.se.conclusion.design.factory.method.common.Sergeant"> 
+    <gender>M</gender>  
+    <age>23</age>  
+    <name> 
+      <firstName>Johnny</firstName>  
+      <lastName>Kim</lastName> 
+    </name>  
+    <id>550E8400-E29B-11D4-A716-446655442222</id> 
+  </bean> 
+</config>

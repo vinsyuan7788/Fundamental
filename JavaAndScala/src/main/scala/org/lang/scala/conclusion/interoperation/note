@@ -1,0 +1,7 @@
+This package simulates a group of recommender that will be invoked by Java
+
+For interoperation between Java and Scala, usually need to import (one of the) below packages inside Scala file:
+-- scala.collection.JavaConverters._ 
+   -- This package is for EXPLICIT conversion (since Scala 2.8.1)
+-- scala.collection.JavaConversions._ 
+   -- This package if for IMPLICIT conversion (since Scala 2.8)

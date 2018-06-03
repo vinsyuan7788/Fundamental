@@ -1,0 +1,2 @@
+This package simulates a recommender system which invoke both Java and Scala recommendation
+-- Practically this system is part of sales system and will be interacted with JavaWeb projects

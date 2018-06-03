@@ -1,0 +1,15 @@
+There are some perspectives that can originate algorithms:
+-- Break-down complexity: D & C (Divide and Conquer), DP (Dynamic Programming)
+-- View differently: data Structure (tree, heap, graph, etc.)
+
+Data structure is about using what angle to observe a group of data:
+-- Array can be observed as tree (or further, heap, etc.), which can be observed as graph
+-- Different perspectives would yield different relevant algorithms for the group of data
+   -- E.g., to sort an array of data, view it as heap, then heap sort
+   -- E.g., to search an array of data, view it as tree, then DFS and BFS
+   
+For sorting algorithm:
+-- Quick sort, merge sort, heap sort
+
+For searching algorithm:
+-- Binary search, DFS, BFS
