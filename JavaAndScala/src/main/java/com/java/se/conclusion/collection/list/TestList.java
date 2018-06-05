@@ -37,7 +37,10 @@ public class TestList {
 	public static void main(String[] args) {
 		TestList testList = new TestList();
 		testList.testPreparation();
+		System.out.println("Here tests list:");
 		testList.testList();
+		System.out.println("\nHere tests list \"toString()\":");
+		testList.testToString();
 	}
 	
 	/**
@@ -94,6 +97,18 @@ public class TestList {
 		/*	Clear the list	*/
 		list.clear();
 		System.out.println("If the list is empty:\n" + list.isEmpty());
+	}
+	
+	/**
+	 * 	This is a method to test "toString()" method
+	 */
+	private void testToString() {
+		
+		List<Integer> integerList = new ArrayList<Integer>();
+		integerList.add(1);
+		integerList.add(2);
+		integerList.add(3);
+		System.out.println(integerList);
 	}
 	
 	/**
