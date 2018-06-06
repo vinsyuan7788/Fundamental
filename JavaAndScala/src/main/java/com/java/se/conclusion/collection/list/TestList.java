@@ -41,8 +41,10 @@ public class TestList {
 		testList.testList();
 		System.out.println("\nHere tests list \"toString()\":");
 		testList.testToString();
+		System.out.println("\nHere tests if 2 lists have the same elements:");
+		testList.testIfTwoListsHaveTheSameElements();
 	}
-	
+
 	/**
 	 * 	This is a method for test preparation
 	 */
@@ -143,5 +145,23 @@ public class TestList {
 		System.out.println("Use spliterator to traverse a list:");
 		Spliterator<T> spliterator = list.spliterator();
 		spliterator.forEachRemaining((element) -> { System.out.println(element); });
+	}
+	
+	/**
+	 * 	This is a method to test if 2 lists have the same elements
+	 */
+	private void testIfTwoListsHaveTheSameElements() {
+		
+		List<String> list1 = new ArrayList<String>();
+		list1.add("a");
+		list1.add("b");
+		list1.add("c");
+		List<String> list2 = new ArrayList<String>();
+		list2.add("c");
+		list2.add("b");
+		list2.add("a");
+		System.out.println(list1.containsAll(list2));
+		System.out.println(list2.containsAll(list1));
+		System.out.println(list1.containsAll(list2) && list2.containsAll(list1));
 	}
 }
