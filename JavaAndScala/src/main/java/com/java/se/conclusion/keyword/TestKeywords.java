@@ -27,6 +27,8 @@ public class TestKeywords {
 		testKeywords.testFinal();
 		System.out.println("\nHere tests \"instanceOf\"");
 		testKeywords.testInstanceof();
+		System.out.println("\nHere tests \"if-elseif\"");
+		testKeywords.testIfElseIf();
 	}
 	
 	/**
@@ -69,6 +71,17 @@ public class TestKeywords {
 //		}
 		if (pigeon instanceof Survivor) {
 			System.out.println("pigeon is an instance of Survivor.");
+		}
+	}
+	
+	private void testIfElseIf() {
+		
+		String str = "I Love You";
+		
+		if (str.equals("I Love You")) {
+			System.out.println(str);
+		} else if (str.length() == 10) {
+			System.out.println(str.length());
 		}
 	}
 }
