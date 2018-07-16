@@ -16,6 +16,9 @@ import com.java.se.conclusion.regex.common.Captcha;
  */
 public class TestRegex {
 
+	private static final String IPV4_REGEX = "(?=(\\b|\\D))(((\\d{1,2})|(1\\d{1,2})|(2[0-4]\\d)|(25[0-5]))\\.){3}((\\d{1,2})|(1\\d{1,2})|(2[0-4]\\d)|(25[0-5]))(?=(\\b|\\D))";
+	private static final String IPV6_REGEX = "^([\\\\da-fA-F]{1,4}:){7}([\\\\da-fA-F]{1,4})$";
+	
 	/**
 	 * 	This is a main method for execution
 	 * 
@@ -29,14 +32,16 @@ public class TestRegex {
 		testRegex.testCharacterClass();
 		System.out.println("\nHere tests greediness:");
 		testRegex.testGreediness();
-		System.out.println("\nHere tests regex match::");
+		System.out.println("\nHere tests regex match:");
 		testRegex.testRegexMatch();
-		System.out.println("\nHere tests regex split::");
+		System.out.println("\nHere tests regex split:");
 		testRegex.testRegexSplit();
-		System.out.println("\nHere tests pattern match::");
+		System.out.println("\nHere tests pattern match:");
 		testRegex.testPatterMatch();
-		System.out.println("\nHere tests pattern split::");
+		System.out.println("\nHere tests pattern split:");
 		testRegex.testPatternSplit();
+		System.out.println("\nHere tests IP address:");
+		testRegex.testIpAddress();
 	}
 	
 	/**
@@ -213,5 +218,37 @@ public class TestRegex {
 		System.out.println("The elements in stringArray1: " + Arrays.toString(stringArray1));
 		String[] stringArray2 = pattern2.split(string2);
 		System.out.println("The elements in stringArray2: " + Arrays.toString(stringArray2));
+	}
+	
+	/**
+	 * 	Test IP address	
+	 */
+	private void testIpAddress() {
+	
+		String realIp = "127.0.0.1";
+		
+		String[] ipArray = new String[] {
+			"192.168.1.110, 192.168.1.120, 192.168.1.130, 192.168.1.100",
+			"unknown<>192.168.1.110, 192.168.1.120, 192.168.1.130, 192.168.1.100",
+			"unknown, 192.168.1.120, unknown, 192.168.1.120"
+		};
+		
+		for (int n = 0; n < ipArray.length; n++) {
+		
+			String[] ips = ipArray[n].split(", ");
+			
+			for (int i = 0; i < ips.length; i++) {
+				if (!ips[i].equalsIgnoreCase("unknown")) {
+					realIp = ips[i];
+					break;
+				}
+			}
+			
+			if (Pattern.compile(IPV4_REGEX).matcher(realIp).matches()) {
+				System.out.println("The real IP address" + (n + 1) + ": " + realIp);
+			} else {
+				System.out.println("The real IP address" + (n + 1) + ": 127.0.0.1");
+			}
+		}
 	}
 }
