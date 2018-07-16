@@ -17,7 +17,7 @@ import com.java.se.conclusion.regex.common.Captcha;
 public class TestRegex {
 
 	private static final String IPV4_REGEX = "(?=(\\b|\\D))(((\\d{1,2})|(1\\d{1,2})|(2[0-4]\\d)|(25[0-5]))\\.){3}((\\d{1,2})|(1\\d{1,2})|(2[0-4]\\d)|(25[0-5]))(?=(\\b|\\D))";
-	private static final String IPV6_REGEX = "^([\\\\da-fA-F]{1,4}:){7}([\\\\da-fA-F]{1,4})$";
+//	private static final String IPV6_REGEX = "^([\\\\da-fA-F]{1,4}:){7}([\\\\da-fA-F]{1,4})$";
 	
 	/**
 	 * 	This is a main method for execution
