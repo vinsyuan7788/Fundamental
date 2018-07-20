@@ -14,6 +14,7 @@ import com.java.se.conclusion.regex.common.Captcha;
  * @author VinceYuan
  *
  */
+@SuppressWarnings("all")
 public class TestRegex {
 
 	private static final String IPV4_REGEX = "(?=(\\b|\\D))(((\\d{1,2})|(1\\d{1,2})|(2[0-4]\\d)|(25[0-5]))\\.){3}((\\d{1,2})|(1\\d{1,2})|(2[0-4]\\d)|(25[0-5]))(?=(\\b|\\D))";
