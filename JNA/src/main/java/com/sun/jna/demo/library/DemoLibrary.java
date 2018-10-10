@@ -12,9 +12,7 @@ public interface DemoLibrary extends Library {
 			ProjectUtils.SO_DIRECTORY + "SharedObjectDemo.so", 
 			DemoLibrary.class);
 	
-	int fnDynamicLinkLibrary();
+	double sum(double arr[], int arrLen);
 	
-	double add(double a, double b);
-	
-	double subtract(double a, double b);
+	double mean(double arr[], int arrLen);
 }
