@@ -6,6 +6,8 @@ import com.sun.jna.utils.ProjectUtils;
 
 public class TestDemo {
 	
+	private static DemoLibrary demoLibrary;
+	
 	/**
 	 * 	This is the static block to load necessary DLL (for Windows) or SO (for Linux) file before the loading of JNA
 	 * 	-- Since it can check the dependent DLL or SO for the desired DLL or SO that needs to be loaded
@@ -22,6 +24,7 @@ public class TestDemo {
 		System.load(Platform.isWindows() ?
 				ProjectUtils.DLL_DIRECTORY + "DynamicLinkLibraryDemo.dll" :
 				ProjectUtils.SO_DIRECTORY + "SharedObjectDemo.so");
+		demoLibrary = DemoLibrary.INSTANCE;
 	}
 	
 	/**
@@ -29,9 +32,7 @@ public class TestDemo {
 	 * 
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		
-		DemoLibrary demoLibrary = DemoLibrary.INSTANCE;
+	public static void main(String[] args) { 
 		
 		double[] arr = { 1d, 2d, 4d, 8d, 16d };
 		
