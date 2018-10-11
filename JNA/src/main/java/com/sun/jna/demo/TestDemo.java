@@ -16,7 +16,7 @@ public class TestDemo {
 	 *  -- This static block can be commented if all dependencies are secured
 	 *     -- However commenting this block is still strongly NOT recommended
 	 *        -- Since if there is any dependency missing, only using JNA to load DLL or SO will throw an indirect or irrelevant exception
-	 *           -- E.g, "XXX is found in resource path (...)" or "NoClassDefFoundException", which actually is not the root reason since any concerned mostly may find XXX is actually in the specified path
+	 *           -- E.g, "XXX is not found in resource path (...)" or "NoClassDefFoundException", which actually is not the root reason since any concerned mostly may find XXX is actually in the specified path
 	 *              -- The reason why this type of exceptions are thrown is that the lack of dependencies cause the incompleteness of compilation during loading and instantiation by JNA directly
 	 *                 -- Hence whenever the compiled class is used, some definition in this class will be NOT found due to its incompleteness  
 	 */
