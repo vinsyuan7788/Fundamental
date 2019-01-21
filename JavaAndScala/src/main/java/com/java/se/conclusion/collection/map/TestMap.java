@@ -100,6 +100,9 @@ public class TestMap {
 		}	
 	}
 	
+	/**
+	 * 	This method is to test Map key
+	 */
 	private void testMapKey() {
 		
 		Map<Long, Integer> map = new HashMap<>();

@@ -2,6 +2,7 @@ package com.java.se.conclusion.collection.set;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.Spliterator;
 
@@ -32,6 +33,7 @@ public class TestSet {
 		TestSet testSet = new TestSet();
 		testSet.testPreparation();
 		testSet.testSet();
+		testSet.testLinkedHashSet();
 	}
 	
 	/**
@@ -103,5 +105,21 @@ public class TestSet {
 		System.out.println("Use spliterator to traverse a set:");
 		Spliterator<T> spliterator = set.spliterator();
 		spliterator.forEachRemaining((element) -> { System.out.println(element); });
+	}
+	
+	private void testLinkedHashSet() {
+		
+		Set<String> set1 = new LinkedHashSet<String>();
+		Set<Integer> set2 = new LinkedHashSet<Integer>();
+		
+		set1.add("123456");
+		set1.add("654321");
+		set1.add("333333");
+		set2.add(3);
+		set2.add(1);
+		set2.add(5);
+		
+		System.out.println(set1);
+		System.out.println(set2);
 	}
 }

@@ -1,9 +1,11 @@
 package com.java.se.conclusion.collection.list;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Set;
 import java.util.Spliterator;
 
 /**
@@ -43,6 +45,10 @@ public class TestList {
 		testList.testToString();
 		System.out.println("\nHere tests if 2 lists have the same elements:");
 		testList.testIfTwoListsHaveTheSameElements();
+		System.out.println("\nHere tests \"removeIf\" API:");
+		testList.testRemoveIf();
+		System.out.println("\nHere tests \"set\" API");
+		testList.testSetPosition();
 	}
 
 	/**
@@ -163,5 +169,48 @@ public class TestList {
 		System.out.println(list1.containsAll(list2));
 		System.out.println(list2.containsAll(list1));
 		System.out.println(list1.containsAll(list2) && list2.containsAll(list1));
+	}
+	
+	/**
+	 * 	This method is to test "removeIf" API
+	 */
+	private void testRemoveIf() {
+		
+		List<String> list = new ArrayList<String>();
+		list.add("A");
+		list.add("A");
+		list.add("B");
+		list.add("B");
+		list.add("B");
+		list.add("C");
+		list.add("D");
+		list.add("D");
+		System.out.println(list);
+		
+		Set<String> specificElements = new HashSet<String>();
+		specificElements.add("C");
+		specificElements.add("D");
+		for (String specificElement : specificElements) {
+			list.removeIf(element -> element.equals(specificElement));
+		}
+		System.out.println(list);
+	}
+	
+	private void testSetPosition() {
+		
+		List<String> strings = new ArrayList<String>();
+		strings.add("abc");
+		strings.add("def");
+		strings.add("ghi");
+		List<Integer> integers = new ArrayList<Integer>();
+		integers.add(10);
+		integers.add(20);
+		integers.add(30);
+		
+		String key = "def";
+		for (int i = 0; i < 10; i++) {
+			integers.set(strings.indexOf(key), integers.get(strings.indexOf(key)) - 1);
+			System.out.println(key + " ---> " + integers.get(strings.indexOf(key)));
+		}
 	}
 }
