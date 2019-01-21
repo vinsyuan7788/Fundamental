@@ -105,12 +105,15 @@ public class TestMap {
 		Map<Long, Integer> map = new HashMap<>();
 		map.put(4844256082L, 123456);
 		map.put(1234567890L, 654321);
+		map.put(Long.MAX_VALUE, 666666);
+		map.put(8997878003191L, 555555);
+		map.put(9999999999999L, 888888);
 		System.out.println(map);
 		
-		Long key1 = 4844256082L;
-		Long key2 = Long.valueOf("4844256082");
-		Long key3 = Long.parseLong("4844256082");
-		Long key4 = new Long("4844256082");
+		Long key1 = 9999999999999L;
+		Long key2 = Long.valueOf("9999999999999");
+		Long key3 = Long.parseLong("9999999999999");
+		Long key4 = new Long("9999999999999");
 		Long[] keys = { key1, key2, key3, key4 };
 		for (Long key : keys) {
 			System.out.println(key + " ---> " + map.get(key));
