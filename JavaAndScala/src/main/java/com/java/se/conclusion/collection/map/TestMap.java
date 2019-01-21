@@ -28,6 +28,7 @@ public class TestMap {
 		TestMap testMap = new TestMap();
 		testMap.testPreparation();
 		testMap.testMap();
+		testMap.testMapKey();
 	}
 	
 	/**
@@ -97,5 +98,22 @@ public class TestMap {
 			V value = entry.getValue();
 			System.out.println(key + " " + value);
 		}	
+	}
+	
+	private void testMapKey() {
+		
+		Map<Long, Integer> map = new HashMap<>();
+		map.put(4844256082L, 123456);
+		map.put(1234567890L, 654321);
+		System.out.println(map);
+		
+		Long key1 = 4844256082L;
+		Long key2 = Long.valueOf("4844256082");
+		Long key3 = Long.parseLong("4844256082");
+		Long key4 = new Long("4844256082");
+		Long[] keys = { key1, key2, key3, key4 };
+		for (Long key : keys) {
+			System.out.println(key + " ---> " + map.get(key));
+		}
 	}
 }
