@@ -24,7 +24,7 @@ public class TestBigNumber {
 	 * 
 	 * @param args
 	 */
-	public static void main(String[] args) {	
+	public static void main(String[] args) {
 		TestBigNumber testBigNumber = new TestBigNumber();
 		testBigNumber.testPreparation();
 		System.out.println("Here tests number calculation:");
